@@ -1,45 +1,47 @@
 <?php
 
-include_once("model/property.php"); 
+include_once("model/propertyModel.php"); 
 
 class propertyController
 {
-     public $property;   
-     public $properties;
-     
-     public function __construct()    
+    
+    public $properties;
+    public $model;
+	
+    public function __construct()    
      {    
-          $this->property = new Property();  
+          $this->model = new PropertyModel();  
      }  
      
     public function propertyList($propertyTypeID) {
-        $this->set('properties', $this->property->findAllByPropertyType($propertyTypeID));
+        $this->set('properties', $this->propertyModel->findAllByPropertyType($propertyTypeID));
     }
     
     public function addProperty()
     {
-        $this->property->propertyName = $_POST['propertyName'];
-        $this->property->propertyTypeID = $_POST['propertyTypeID'];
-        $this->property->cityID = $_POST['cityID'];
-        $this->property->streetAddress = $_POST['streetAddress'];
-        $this->property->shortDescription = $_POST['shortDescription'];
-        $this->property->propertyID = $_POST['propertyID'];
-        $this->property->propertyName = $_POST['propertyName'];
-        $this->property->propertyTypeID = $_POST['propertyTypeID'];
-        $this->property->cityID = $_POST['cityID'];
-        $this->property->streetAddress = $_POST['streetAddress'];
-        $this->property->shortDescription = $_POST['shortDescription'];
-        $this->property->aboutUs = $_POST['aboutUs'];
-        $this->property->openingHour = $_POST['openingHour'];
-        $this->property->closingHour = $_POST['closingHour'];
-        $this->property->managerName = $_POST['managerName'];
-        $this->property->email = $_POST['email'];
-        $this->property->officePhone = $_POST['officePhone'];
-        $this->property->mobile = $_POST['mobile'];
-        $this->property->fax = $_POST['fax'];
-        $this->property->geoLocation = $_POST['geoLocation'];
+        $property = new Property();
+        $property->propertyName = $_POST['propertyName'];
+        $property->propertyTypeID = $_POST['propertyTypeID'];
+        $property->cityID = $_POST['cityID'];
+        $property->streetAddress = $_POST['streetAddress'];
+        $property->shortDescription = $_POST['shortDescription'];
+        $property->propertyID = $_POST['propertyID'];
+        $property->propertyName = $_POST['propertyName'];
+        $property->propertyTypeID = $_POST['propertyTypeID'];
+        $property->cityID = $_POST['cityID'];
+        $property->streetAddress = $_POST['streetAddress'];
+        $property->shortDescription = $_POST['shortDescription'];
+        $property->aboutUs = $_POST['aboutUs'];
+        $property->openingHour = $_POST['openingHour'];
+        $property->closingHour = $_POST['closingHour'];
+        $property->managerName = $_POST['managerName'];
+        $property->email = $_POST['email'];
+        $property->officePhone = $_POST['officePhone'];
+        $property->mobile = $_POST['mobile'];
+        $property->fax = $_POST['fax'];
+        $property->geoLocation = $_POST['geoLocation'];
     
-        $this->property->save();
+        $this->model->save($property);
     }
     
 }

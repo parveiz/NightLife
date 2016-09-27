@@ -95,7 +95,7 @@
                 <li><a class="top-menu-txt" href="contact.html">Contact Us</a>
                 </li>
                 <!--/ Contact us -->
-                <li class="weather"><a class="top-menu-txt" href="addProperty.php">Add Property</a></li>
+                <li class="weather"><a class="top-menu-txt" href="view/addProperty.php">Add Property</a></li>
             </ul>
             <!--/ mega menu -->
         </div>
@@ -195,7 +195,7 @@
                 <li class="k-opn"><a class="top-menu-txt" href="contact.html">Contact
                         Us</a></li>
                 <!--/Contact Us -->
-                <li class="weather"><a class="top-menu-txt" href="addProperty.php">Add Property</a></li>
+                <li class="weather"><a class="top-menu-txt" href="view/addProperty.php">Add Property</a></li>
             </ul>
             <!--/ mega menu -->
         </nav>

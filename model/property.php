@@ -25,14 +25,4 @@ class Property
     public $fax;
     public $geoLocation;
     
-    public function findAllByPropertyType($propertyTypeID)
-    {
-        
-    }
-    
-    public function save()
-    {
-        
-    }
-    
 }
