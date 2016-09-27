@@ -2,14 +2,6 @@
 
 class Property 
 {
-    
-    public $propertyID;
-    public $propertyName;
-    public $propertyTypeID;
-    public $cityID;
-    public $streetAddress;
-    public $shortDescription;
-    public $propertyID;
     public $propertyName;
     public $propertyTypeID;
     public $cityID;

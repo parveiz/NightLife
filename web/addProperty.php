@@ -168,7 +168,7 @@
 					<li><a class="top-menu-txt" href="contact.html">Contact Us</a>
 					</li>
 					<!--/ Contact us -->
-					<li class="weather"><a class="top-menu-txt" href="view/addProperty.php">Add Property</a></li>
+					<li class="weather"><a class="top-menu-txt" href="addProperty.php">Add Property</a></li>
 				</ul>
 				<!--/ mega menu -->
 			</div>
@@ -268,7 +268,7 @@
 					<li class="k-opn"><a class="top-menu-txt" href="contact.html">Contact
 							Us</a></li>
 					<!--/Contact Us -->
-					<li class="weather"><a class="top-menu-txt" href="view/addProperty.php">Add Property</a></li>
+					<li class="weather"><a class="top-menu-txt" href="addProperty.php">Add Property</a></li>
 				</ul>
 				<!--/ mega menu -->
 			</nav>
@@ -298,7 +298,7 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<div class="well">
-						<form>
+                                            <form method="POST" action="../controller/propertyController.php">
 							<div class="form-group">
 								<label for="propertyType">Property Type</label> <select class="form-control" id="propertyType" name="propertyType">
 									<option selected="selected" value="club">Club</option>

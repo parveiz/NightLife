@@ -1,7 +1,7 @@
 <?php
 
-include_once("model/property.php");
-include_once("model/connect.php");
+include_once("property.php");
+include_once("connect.php");
 
 class PropertyModel {
 
@@ -10,6 +10,8 @@ class PropertyModel {
     }
 
     public function save($property) {
+
+        print "inside save method!";
         $stmt = "INSERT INTO `property`(`PropertyName`,`PropertyTypeID`,`CityID`,`StreetAddress`,
                                                     `ShortDescription`,`AboutUs`,`OpeningHour`,`ClosingHour`,
                                                     `ManagerName`,`Email`,`OfficePhone`,`Mobile`,`Fax`,`GeoLocation`)
@@ -19,11 +21,11 @@ class PropertyModel {
                                                     '$property->closingHour','$property->managerName','$property->email','$property->officePhone','$property->mobile',
                                                     '$property->fax','$property->geoLocation');";
 
-        $resultUser = mysqli_query($connection, $stmt) or die(mysqli_error($connection));
-        if (mysqli_num_rows($result) == 1) {
-            return true;
+        $result = mysqli_query($connection, $stmt) or die(mysqli_error($connection));
+        if ($result) {
+            print "YOUR REGISTRATION IS COMPLETED...";
         } else {
-            return false;
+            print "YOUR REGISTRATION IS Failed...";
         }
     }
 

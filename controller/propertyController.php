@@ -1,6 +1,6 @@
 <?php
 
-include_once("model/propertyModel.php"); 
+include_once("../model/propertyModel.php"); 
 
 class propertyController
 {
@@ -11,6 +11,7 @@ class propertyController
     public function __construct()    
      {    
           $this->model = new PropertyModel();  
+          print "inside controller constructor";
      }  
      
     public function propertyList($propertyTypeID) {
@@ -18,14 +19,10 @@ class propertyController
     }
     
     public function addProperty()
+            
     {
+        print "in property method";
         $property = new Property();
-        $property->propertyName = $_POST['propertyName'];
-        $property->propertyTypeID = $_POST['propertyTypeID'];
-        $property->cityID = $_POST['cityID'];
-        $property->streetAddress = $_POST['streetAddress'];
-        $property->shortDescription = $_POST['shortDescription'];
-        $property->propertyID = $_POST['propertyID'];
         $property->propertyName = $_POST['propertyName'];
         $property->propertyTypeID = $_POST['propertyTypeID'];
         $property->cityID = $_POST['cityID'];
@@ -41,7 +38,10 @@ class propertyController
         $property->fax = $_POST['fax'];
         $property->geoLocation = $_POST['geoLocation'];
     
+        echo "about to save data!";
         $this->model->save($property);
+        
+        
     }
     
 }
