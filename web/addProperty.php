@@ -298,17 +298,17 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<div class="well">
-                                            <form method="POST" action="../controller/propertyController.php">
+                                            <form method="POST" action="../controller/propertyController.php" target="_self">
 							<div class="form-group">
 								<label for="propertyType">Property Type</label> <select class="form-control" id="propertyType" name="propertyType">
 									<option selected="selected" value="club">Club</option>
 								</select>
 							</div>
 							<div class="form-group">
-								<label for="propertyName">Property Name</label> <input type="text" class="form-control" id="propertyName" placeholder="Property Name">
+								<label for="propertyName">Property Name</label> <input type="text" class="form-control" id="propertyName" name="propertyName" placeholder="Property Name">
 							</div>
 							<div class="form-group">
-								<label for="propertyAddress">Property Address</label> <input type="text" class="form-control" id="propertyAddress"
+								<label for="propertyAddress">Property Address</label> <input type="text" class="form-control" id="propertyAddress" name="propertyAddress"
 									placeholder="Street Address">
 							</div>
 							<div class="form-group">
@@ -325,7 +325,7 @@
 							<div class="row">
 								<div class="col-xs-6">
 									<div class="form-group">
-										<label for="propertyNumber1">Property Contact No 1</label> <input type="text" class="form-control" id="propertyNumber1"
+										<label for="propertyNumber1">Property Contact No 1</label> <input type="text" class="form-control" id="propertyNumber1" name="propertyNumber1"
 											placeholder="Landline Number">
 									</div>
 								</div>
